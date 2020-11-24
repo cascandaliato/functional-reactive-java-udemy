@@ -7,7 +7,8 @@ import java.util.function.Function;
 public class PracticeFunction {
   public static void main(String[] args) {
     List<String> list = List.of("foo", "bar", "foobar", "foobarbaz");
-    Function<String, Integer> len = e -> e.length();
+    //    Function<String, Integer> len = e -> e.length();
+    Function<String, Integer> len = String::length;
     List<Integer> newList = map(list, len);
     System.out.println(newList);
   }
