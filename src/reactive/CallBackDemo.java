@@ -1,4 +1,4 @@
-package rx;
+package reactive;
 
 public class CallBackDemo {
   public static void main(String[] args) throws InterruptedException {

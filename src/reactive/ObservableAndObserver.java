@@ -1,13 +1,17 @@
 package reactive;
 
-import java.util.Observable;
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableEmitter;
+import io.reactivex.rxjava3.core.ObservableOnSubscribe;
+import io.reactivex.rxjava3.core.Observer;
+import io.reactivex.rxjava3.disposables.Disposable;
 
 public class ObservableAndObserver {
   public static void main(String[] args) {
     Observable<Integer> source =
-        ObservableCreate
-            < Integer
-            > (new ObservableOnSubscribe<Integer>() {
+        Observable.create(
+            new ObservableOnSubscribe<Integer>() {
 
               @Override
               public void subscribe(@NonNull ObservableEmitter<Integer> emitter) throws Throwable {

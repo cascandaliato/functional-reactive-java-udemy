@@ -1,6 +1,6 @@
 package reactive;
 
-import java.util.Observable;
+import io.reactivex.rxjava3.core.Observable;
 
 public class HelloRxJava {
   public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class HelloRxJava {
               e.onNext("RxJava");
             });
 
-    source.subscribe(e -> "Observer 1: " + e);
-    source.subscribe(e -> "Observer 2: " + e);
+    source.subscribe(e -> System.out.println("Observer 1: " + e));
+    source.subscribe(e -> System.out.println("Observer 2: " + e));
   }
 }

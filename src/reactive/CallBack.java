@@ -1,4 +1,4 @@
-package rx;
+package reactive;
 
 public interface CallBack {
   void pushData(String data);

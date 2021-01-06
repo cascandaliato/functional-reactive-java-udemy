@@ -1,7 +1,8 @@
 package reactive;
 
+import io.reactivex.rxjava3.core.Observable;
+
 import java.util.List;
-import java.util.Observable;
 
 public class CreatingObservable {
   public static void main(String[] args) {
@@ -29,6 +30,6 @@ public class CreatingObservable {
     // fromIterable
     List<String> list = List.of("foo", "bar", "baz");
     Observable<String> fromIterable = Observable.fromIterable(list);
-    fromIterable(System.out::println);
+    fromIterable.subscribe(System.out::println);
   }
 }
