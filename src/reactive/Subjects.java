@@ -18,6 +18,9 @@ public class Subjects {
 
     subject.subscribe(System.out::println);
     subject.subscribe(e -> System.out.println("The element is " + e));
+    subject.onNext("Hello");
+    subject.onComplete();
+    subject.onNext("World");
 
     src1.subscribe(subject);
     //    src2.subscribe(subject);
