@@ -1,6 +1,7 @@
 package generics;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CollectionDemo {
   public static void main(String[] args) {
@@ -15,5 +16,13 @@ public class CollectionDemo {
       String str = o;
       System.out.println(str);
     }
+
+    HashMap<Integer, String> map = new HashMap<>();
+
+    Bin<String, Integer> bin = new Bin<>();
+    bin.setDryTrash("abc");
+    bin.setWetTrash(123);
+    System.out.println("Dry Trash: " + bin.getDryTrash());
+    System.out.println("Wet Trash: " + bin.getWetTrash());
   }
 }
